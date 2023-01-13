@@ -1,5 +1,7 @@
+import 'package:counter/blocs/counter_bloc.dart';
 import 'package:counter/counter_page.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 void main() {
   runApp(MyApp());
@@ -25,7 +27,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         title: "Counter App chu gi nua!",
         home: Center(
-          child: CounterPage(),
-        ));
+          child: BlocProvider<CounterBloc>(
+            create: (context) => CounterBloc(),
+            child: CounterPage(),
+            
+            )
+          
+        )
+        );
   }
 }
