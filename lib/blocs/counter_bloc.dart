@@ -2,6 +2,8 @@ import 'package:counter/events/counter_even.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class CounterBloc extends Bloc<CounterEvent, int> {
+  CounterBloc(super.initialState);
+
   @override
   // TODO: implement initialState
   int get initialState => 0;
