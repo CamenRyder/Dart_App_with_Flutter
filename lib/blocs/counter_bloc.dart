@@ -16,7 +16,7 @@ class CounterBloc extends Bloc<CounterEvent, int> {
         yield newState;
         break;
       case CounterEvent.decrement:
-        var newState = state - 1;
+        int newState = state - 1;
         print("Default state decrease: " + newState.toString());
         yield newState;
         break;

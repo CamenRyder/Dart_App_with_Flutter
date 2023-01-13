@@ -27,12 +27,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         title: "Counter App chu gi nua!",
         home: Center(
-          child: BlocProvider<CounterBloc>(
-            create: (context) => CounterBloc(),
-            child: CounterPage(),
-            )
-          
-        )
-        );
+            child: BlocProvider<CounterBloc>(
+          create: (context) => CounterBloc(),
+          child: CounterPage(),
+        )));
   }
 }
