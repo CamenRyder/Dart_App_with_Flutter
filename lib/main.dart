@@ -5,6 +5,11 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+
+
+  Stream<int> aStreamFunction() async*{
+        
+  }
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
