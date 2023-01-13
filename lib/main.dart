@@ -30,7 +30,6 @@ class MyApp extends StatelessWidget {
           child: BlocProvider<CounterBloc>(
             create: (context) => CounterBloc(),
             child: CounterPage(),
-            
             )
           
         )

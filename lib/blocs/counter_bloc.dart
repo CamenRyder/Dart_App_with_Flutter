@@ -8,15 +8,17 @@ class CounterBloc extends Bloc<CounterEvent, int> {
 
   @override
   Stream<int> mapEventToState(CounterEvent event) async* {
-    print(state);
+    print("Default state: " + state.toString());
     switch (event) {
       case CounterEvent.increment:
         var newState = state + 1;
+        print("Default state increase: " + newState.toString());
         yield newState;
         break;
       case CounterEvent.decrement:
         var newState = state - 1;
-        yield newState; 
+        print("Default state decrease: " + newState.toString());
+        yield newState;
         break;
     }
     // TODO: implement mapEventToState

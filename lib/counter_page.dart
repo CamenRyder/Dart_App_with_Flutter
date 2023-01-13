@@ -22,7 +22,9 @@ class CounterPage extends StatelessWidget {
                       border: Border.all(color: Colors.red)),
                   child: TextButton(
                     onPressed: (() {
-                      CounterBloc().add(CounterEvent.decrement);
+                      print("tap tap");
+                      CounterBloc().add(CounterEvent.increment);
+                      print("Result: " + state.toString());
                     }),
                     child: Text(
                       "Increase",
@@ -31,7 +33,7 @@ class CounterPage extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  state.toString(),
+                  "Result: $state",
                   style: TextStyle(color: Colors.black, fontSize: 28),
                 ),
                 Container(
@@ -43,7 +45,7 @@ class CounterPage extends StatelessWidget {
                       border: Border.all(color: Colors.blue)),
                   child: TextButton(
                     onPressed: (() {
-                      CounterBloc().add(CounterEvent.increment);
+                      CounterBloc().add(CounterEvent.decrement);
                     }),
                     child: Text(
                       "Decrease",
