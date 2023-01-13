@@ -1,3 +1,4 @@
+import 'package:counter/counter_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -5,18 +6,26 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  // Stream<int> aStreamFunction() async* {
+  //   yield 2;
+  //   yield 18;
+  //   yield 20;
+  // }
 
-
-  Stream<int> aStreamFunction() async*{
-        
-  }
   @override
   Widget build(BuildContext context) {
+    // final elemenst = this.aStreamFunction();
+    // elemenst.forEach(
+    //   (element) {
+
+    //   },
+    // );
+
     // TODO: implement build
     return MaterialApp(
         title: "Counter App chu gi nua!",
         home: Center(
-          child: Text("App counter number!"),
+          child: CounterPage(),
         ));
   }
 }
