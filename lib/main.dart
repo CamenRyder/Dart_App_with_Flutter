@@ -11,6 +11,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    int index = 0;
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
@@ -41,7 +42,12 @@ class MyApp extends StatelessWidget {
                         backgroundColor:
                             MaterialStatePropertyAll(Colors.blue[800])),
                     onPressed: (() {
-                      _colorBloc.changeColor();
+                      index++;
+                      print(index);
+                      if (index % 2 == 1)
+                        _colorBloc.changeColor();
+                      else
+                        _colorBloc.changeColor2();
                     }),
                     child: Text(
                       "Change",

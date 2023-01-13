@@ -9,6 +9,9 @@ class ColorBloc {
   void changeColor() {
     _streamController.sink.add(Colors.red);
   }
+   void changeColor2() {
+    _streamController.sink.add(Colors.green[700]);
+  }
 
   void dispose() {
     _streamController.close();
